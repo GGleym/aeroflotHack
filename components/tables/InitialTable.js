@@ -8,9 +8,8 @@ export const InitialTable = () => {
             <p className={styles.formDescription}>Выберите свой пользовательский путь, и программа рассчитает данные</p>
             <div className={styles.linksBox}>
                 <Link href={'/dynamicTable'} className={styles.linkTable}>Динамика</Link>
-                <Link href={'/demandTable'} className={styles.linkTable}>Спрос</Link>
                 <Link href={'/seasonTable'} className={styles.linkTable}>Сезонность</Link>
-                <Link href={'/predictTable'} className={styles.linkTable}>Предикт</Link>
+                <Link href={'/predictTable'} className={styles.linkTable}>Прогноз</Link>
             </div>
         </div>
     )

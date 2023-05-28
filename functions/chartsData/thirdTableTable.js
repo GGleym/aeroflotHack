@@ -7,7 +7,7 @@ export const thirdConfig = {
     plugins: {
         title: {
             display: true,
-            text: 'Профиль спроса классов бронирования'
+            text: 'Прогноз бронирования'
         }
     }
 }

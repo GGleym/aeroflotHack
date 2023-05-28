@@ -1,6 +1,6 @@
 import firstExcel from '../../data/excelJson/firstExcel.json'
 import DynamicTable from "../../pages/dynamicTable";
-import {useFetch} from "../../api/fetchData";
+import {useFetch} from "../../api/dynamicFetchData";
 import {dynamicApi} from "../../data/apiUrls/dynamicApi";
 import {useEffect} from "react";
 import {useState} from "react";
@@ -46,7 +46,7 @@ export const filterEverything = (segClass, date, period, direction, tables) => {
 
     let arrOfNums = []
 
-    let filteredArr = tables.filter((item) => {
+    let filteredArr = firstExcel.filter((item) => {
         let firstDemand = item['SEG_CLASS_CODE'] === segClass['value']
         let thirdDemand = item['DIRECTION'] === direction
         let fourthDemand = null

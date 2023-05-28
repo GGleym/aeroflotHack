@@ -81,13 +81,14 @@ body {
     height: 5px;
 }
 
+
 *::-webkit-scrollbar-track {
     background: #FFFFFF;
     border: none;
 }
 
 *::-webkit-scrollbar-thumb {
-    background: #0050FF;
+    background: #002596;
     border: none;
     border-radius: 4px 0 0 4px;
 }

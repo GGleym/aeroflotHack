@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Сочи",
+    "label": "fromSochi"
+  },
+  {
+    "name": "Москва",
+    "label": "fromMoscow"
+  },
+  {
+    "name": "Астрахань",
+    "label": "fromAstrahan"
+  }
+]

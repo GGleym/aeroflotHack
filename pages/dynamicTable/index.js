@@ -8,13 +8,17 @@ import {
   secondData
 } from '../../functions/chartsData/secondTableData';
 import {useState} from "react";
-import {useFetch} from "../../api/fetchData";
+import {useFetch} from "../../api/dynamicFetchData";
 import {dynamicApi} from "../../data/apiUrls/dynamicApi";
+import {DynamicLoader} from "../../components/loaders/dynamicLoader";
+import {ShowAlert} from "../../components/loaders/ShowAlert";
+import {SecondChartTable} from "../../components/chartsTables/SecondChartTable";
 
 
 const DynamicTable = props => {
     const [data, setData] = useState(null)
     const [firstTableData, setFirstTableData] = useState(null)
+
 
   return (
     <>
@@ -23,7 +27,7 @@ const DynamicTable = props => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header />
-      <Form setData={setData} />
+      <Form setData={setData} apiUrl={}/>
       <div className={styles.chartsTableDiv}>
           {
              data ? (
@@ -32,11 +36,8 @@ const DynamicTable = props => {
                      options={config}
                      className={styles.chartsTable}
                  />
-             ) : <h1>Ошибка</h1>
-             //     <h1>Загрузка данных...</h1>
-             // ) : error ? (
-             //     <h1>Извините, но данные с сервера не пришли :(</h1>
-             // ) : <h1>Успех</h1>
+             ) : <ShowAlert />
+
           }
       </div>
     </>

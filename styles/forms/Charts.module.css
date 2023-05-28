@@ -15,3 +15,24 @@
     justify-content: center;
     align-items: center;
 }
+
+.dynamicLoader {
+    position: absolute;
+    top: 50%;
+    gap: 10px;
+    color: #002596;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.dynamicLoader svg {
+    fill: #002596;
+}
+
+
+.showAlertText {
+    font-size: 25px;
+    text-decoration: underline;
+}

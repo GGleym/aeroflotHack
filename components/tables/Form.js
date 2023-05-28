@@ -1,6 +1,7 @@
 import { SelectType } from '../dynamicForm/SelectType';
 import { transpiler } from '../../functions/transpileObj';
-import cityData from '/data/cityData.json';
+import fromCityData from '/data/fromCityData.json';
+import toCityData from '/data/toCityData.json'
 import styles from '../../styles/forms/Form.module.css';
 import { ReactCalendar } from '../dynamicForm/CalendarType';
 import React, { useState } from 'react';
@@ -8,45 +9,59 @@ import classOfBooking from '/data/classOfBooking.json';
 import { useEffect } from 'react';
 import firstExcel from '/data/excelJson/firstExcel.json';
 import periodOfPrediction from '/data/periodOfPrediction.json';
-import {getClass} from "../../functions/getOptions/getClass";
-import {convertJson} from "../../functions/chartsData/firstTableData";
-import {filterEverything} from "../../functions/chartsData/firstTableData";
-import {dynamicApi} from "../../data/apiUrls/dynamicApi";
-import {fetchData, useFetch} from "../../api/fetchData";
+import { getClass } from '../../functions/getOptions/getClass';
+import { convertJson } from '../../functions/chartsData/firstTableData';
+import { filterEverything } from '../../functions/chartsData/firstTableData';
+import { dynamicApi } from '../../data/apiUrls/dynamicApi';
+import {dynamicFetchData, fetchData, useFetch} from '../../api/dynamicFetchData';
 
-export const Form = (props) => {
-  const [date, setDate] = useState(new Date("01.01.2018"));
+export const Form = props => {
+  const [date, setDate] = useState(new Date('01.01.2018'));
   const [period, setPeriod] = useState(null);
   const [segClass, setSegClass] = useState(null);
-  const [direction, setDirection] = useState(null);
+  const [fromDirection, setFromDirection] = useState(null);
+  const [toDirection, setToDirection] = useState(null);
+  const {data, loading} = dynamicFetchData(dynamicApi)
+
 
   useEffect(() => {
-      if (segClass && date && period) { //добавь direction и так далее
-          const getFetchedData = async () => {
-              const tables = await fetchData(dynamicApi)
-              console.log(tables)
-              props.setData(filterEverything(tables, segClass, date.toLocaleDateString(), period))
-          }
-          getFetchedData()
-      }
-  }, [date, segClass, period])
-
-
+    if (segClass && date && period) {
+      //добавь direction и так далее
+      props.setData(
+        filterEverything(data, segClass, date.toLocaleDateString(), period)
+      );
+    }
+  }, [segClass, date, period]);
 
   return (
     <div className={styles.menuWrapper}>
       <SelectType
         textClass={styles.textClass}
-        upText={'Направление'}
+        upText={'Откуда?'}
         isSearchable={false}
-        onChange={(direction) => {
-            setDirection(direction)
+        onChange={direction => {
+          setFromDirection(direction);
         }}
-        options={transpiler(cityData)}
+        options={transpiler(fromCityData)}
         id={'directionSelect'}
         placeholder={'Выбрать направление'}
         name={'directionSelect'}
+        className={fromDirection ? styles.hideCalendar : ''}
       />
+        {
+            fromDirection && <SelectType
+                textClass={styles.textClass}
+                upText={'Куда?'}
+                isSearchable={false}
+                onChange={direction => {
+                    setToDirection(direction);
+                }}
+                options={transpiler(toCityData)}
+                id={'toDirectionSelect'}
+                placeholder={'Выбрать направление'}
+                name={'toDirectionSelect'}
+            />
+        }
       {/*<SelectType*/}
       {/*    textClass={styles.textClass}*/}
       {/*    upText={'Номер рейса'}*/}

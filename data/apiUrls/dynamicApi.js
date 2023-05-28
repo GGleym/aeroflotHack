@@ -1,1 +1,1 @@
-export const dynamicApi = 'https://api.forward-it.ru/api/dynamic-history'
+export const dynamicApi = 'https://jsonplaceholder.typicode.com/todos/1'

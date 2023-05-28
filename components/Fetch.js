@@ -1,4 +1,3 @@
-import { useFetch } from '../api/fetchData';
 
 export const Fetch = ({
   url,

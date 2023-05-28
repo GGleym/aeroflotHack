@@ -3,7 +3,7 @@ import { Header } from '../components/Header';
 import { InitialTable } from '../components/tables/InitialTable';
 import {dynamicApi} from "../data/apiUrls/dynamicApi";
 import {Fetch} from "../components/Fetch";
-import {useFetch} from "../api/fetchData";
+import {useFetch} from "../api/dynamicFetchData";
 import {useEffect} from "react";
 
 export default function Home() {
