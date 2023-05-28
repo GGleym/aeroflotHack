@@ -1,0 +1,33 @@
+{
+  "name": "aeroflot",
+  "version": "1.0.0",
+  "description": "Aeroflot Hackathon",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Ivan Gleym",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.3.0",
+    "date-fns": "^2.30.0",
+    "next": "^13.4.3",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-datepicker": "^4.11.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0",
+    "react-select": "^5.7.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.1",
+    "eslint": "^8.40.0",
+    "eslint-config-next": "^13.4.3",
+    "prettier": "^2.8.8"
+  }
+}

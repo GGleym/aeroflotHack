@@ -1,0 +1,24 @@
+.header {
+    width: 100%;
+    background-color: #002596;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.rightHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.headerLink {
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    font-weight: 700;
+}
+

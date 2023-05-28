@@ -1,0 +1,1 @@
+export const dynamicApi = 'https://jsonplaceholder.typicode.com/todos/1'

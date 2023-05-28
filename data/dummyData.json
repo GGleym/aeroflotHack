@@ -1,0 +1,572 @@
+{
+  "0": {
+    "date": 1514851200000,
+    "demand": 2730,
+    "isForecast": 0,
+    "seasonality_component": 0.0094439172
+  },
+  "1": {
+    "date": 1514937600000,
+    "demand": 3082,
+    "isForecast": 0,
+    "seasonality_component": 0.0106446715
+  },
+  "2": {
+    "date": 1515024000000,
+    "demand": 4134,
+    "isForecast": 0,
+    "seasonality_component": 0.0107969182
+  },
+  "3": {
+    "date": 1515110400000,
+    "demand": 3252,
+    "isForecast": 0,
+    "seasonality_component": 0.0109804542
+  },
+  "4": {
+    "date": 1515196800000,
+    "demand": 4227,
+    "isForecast": 0,
+    "seasonality_component": 0.0111789
+  },
+  "5": {
+    "date": 1515283200000,
+    "demand": 3724,
+    "isForecast": 0,
+    "seasonality_component": 0.0115802014
+  },
+  "6": {
+    "date": 1515369600000,
+    "demand": 3885,
+    "isForecast": 0,
+    "seasonality_component": 0.0119327838
+  },
+  "7": {
+    "date": 1515456000000,
+    "demand": 3352,
+    "isForecast": 0,
+    "seasonality_component": 0.0119903226
+  },
+  "8": {
+    "date": 1515542400000,
+    "demand": 3438,
+    "isForecast": 0,
+    "seasonality_component": 0.0115831413
+  },
+  "9": {
+    "date": 1515628800000,
+    "demand": 3525,
+    "isForecast": 0,
+    "seasonality_component": 0.0107969182
+  },
+  "10": {
+    "date": 1515715200000,
+    "demand": 4075,
+    "isForecast": 0,
+    "seasonality_component": 0.0103057387
+  },
+  "11": {
+    "date": 1515801600000,
+    "demand": 4064,
+    "isForecast": 0,
+    "seasonality_component": 0.0089546277
+  },
+  "12": {
+    "date": 1515888000000,
+    "demand": 4297,
+    "isForecast": 0,
+    "seasonality_component": 0.0093330396
+  },
+  "13": {
+    "date": 1515974400000,
+    "demand": 3847,
+    "isForecast": 0,
+    "seasonality_component": 0.0093496293
+  },
+  "14": {
+    "date": 1516060800000,
+    "demand": 4189,
+    "isForecast": 0,
+    "seasonality_component": 0.009596794
+  },
+  "15": {
+    "date": 1516147200000,
+    "demand": 3713,
+    "isForecast": 0,
+    "seasonality_component": 0.0094367774
+  },
+  "16": {
+    "date": 1516233600000,
+    "demand": 4204,
+    "isForecast": 0,
+    "seasonality_component": 0.009173653
+  },
+  "17": {
+    "date": 1516320000000,
+    "demand": 4121,
+    "isForecast": 0,
+    "seasonality_component": 0.0090428259
+  },
+  "18": {
+    "date": 1516406400000,
+    "demand": 4305,
+    "isForecast": 0,
+    "seasonality_component": 0.0093347196
+  },
+  "19": {
+    "date": 1516492800000,
+    "demand": 4043,
+    "isForecast": 0,
+    "seasonality_component": 0.0095379952
+  },
+  "20": {
+    "date": 1516579200000,
+    "demand": 3931,
+    "isForecast": 0,
+    "seasonality_component": 0.0092719309
+  },
+  "21": {
+    "date": 1516665600000,
+    "demand": 2336,
+    "isForecast": 0,
+    "seasonality_component": 0.0092007425
+  },
+  "22": {
+    "date": 1516752000000,
+    "demand": 3340,
+    "isForecast": 0,
+    "seasonality_component": 0.009268151
+  },
+  "23": {
+    "date": 1516838400000,
+    "demand": 3059,
+    "isForecast": 0,
+    "seasonality_component": 0.0099924255
+  },
+  "24": {
+    "date": 1516924800000,
+    "demand": 4002,
+    "isForecast": 0,
+    "seasonality_component": 0.0104922147
+  },
+  "25": {
+    "date": 1517011200000,
+    "demand": 3349,
+    "isForecast": 0,
+    "seasonality_component": 0.0099031774
+  },
+  "26": {
+    "date": 1517097600000,
+    "demand": 4113,
+    "isForecast": 0,
+    "seasonality_component": 0.0098525685
+  },
+  "27": {
+    "date": 1517184000000,
+    "demand": 3262,
+    "isForecast": 0,
+    "seasonality_component": 0.0103708373
+  },
+  "28": {
+    "date": 1517270400000,
+    "demand": 4129,
+    "isForecast": 0,
+    "seasonality_component": 0.0102729794
+  },
+  "29": {
+    "date": 1517356800000,
+    "demand": 3372,
+    "isForecast": 0,
+    "seasonality_component": 0.0102429501
+  },
+  "30": {
+    "date": 1517443200000,
+    "demand": 3814,
+    "isForecast": 0,
+    "seasonality_component": 0.0099938954
+  },
+  "31": {
+    "date": 1517529600000,
+    "demand": 3646,
+    "isForecast": 0,
+    "seasonality_component": 0.0106131721
+  },
+  "32": {
+    "date": 1517616000000,
+    "demand": 3451,
+    "isForecast": 0,
+    "seasonality_component": 0.0108622268
+  },
+  "33": {
+    "date": 1517702400000,
+    "demand": 3372,
+    "isForecast": 0,
+    "seasonality_component": 0.0106747008
+  },
+  "34": {
+    "date": 1517788800000,
+    "demand": 4411,
+    "isForecast": 0,
+    "seasonality_component": 0.010945595
+  },
+  "35": {
+    "date": 1517875200000,
+    "demand": 3862,
+    "isForecast": 0,
+    "seasonality_component": 0.0112551284
+  },
+  "36": {
+    "date": 1517961600000,
+    "demand": 4180,
+    "isForecast": 0,
+    "seasonality_component": 0.011549122
+  },
+  "37": {
+    "date": 1518048000000,
+    "demand": 3939,
+    "isForecast": 0,
+    "seasonality_component": 0.0117897769
+  },
+  "38": {
+    "date": 1518134400000,
+    "demand": 4179,
+    "isForecast": 0,
+    "seasonality_component": 0.0118065765
+  },
+  "39": {
+    "date": 1518220800000,
+    "demand": 3660,
+    "isForecast": 0,
+    "seasonality_component": 0.0114418143
+  },
+  "40": {
+    "date": 1518307200000,
+    "demand": 4201,
+    "isForecast": 0,
+    "seasonality_component": 0.0106098122
+  },
+  "41": {
+    "date": 1518393600000,
+    "demand": 3690,
+    "isForecast": 0,
+    "seasonality_component": 0.0104485357
+  },
+  "42": {
+    "date": 1518480000000,
+    "demand": 4219,
+    "isForecast": 0,
+    "seasonality_component": 0.0097479907
+  },
+  "43": {
+    "date": 1518566400000,
+    "demand": 4267,
+    "isForecast": 0,
+    "seasonality_component": 0.0101045631
+  },
+  "44": {
+    "date": 1518652800000,
+    "demand": 3844,
+    "isForecast": 0,
+    "seasonality_component": 0.009919137
+  },
+  "45": {
+    "date": 1518739200000,
+    "demand": 2545,
+    "isForecast": 0,
+    "seasonality_component": 0.0099710059
+  },
+  "46": {
+    "date": 1518825600000,
+    "demand": 2951,
+    "isForecast": 0,
+    "seasonality_component": 0.0097742401
+  },
+  "47": {
+    "date": 1518912000000,
+    "demand": 3291,
+    "isForecast": 0,
+    "seasonality_component": 0.0100365245
+  },
+  "48": {
+    "date": 1518998400000,
+    "demand": 4186,
+    "isForecast": 0,
+    "seasonality_component": 0.0100235048
+  },
+  "49": {
+    "date": 1519084800000,
+    "demand": 3369,
+    "isForecast": 0,
+    "seasonality_component": 0.0101963311
+  },
+  "50": {
+    "date": 1519171200000,
+    "demand": 4203,
+    "isForecast": 0,
+    "seasonality_component": 0.0100844035
+  },
+  "51": {
+    "date": 1519257600000,
+    "demand": 3171,
+    "isForecast": 0,
+    "seasonality_component": 0.0099571462
+  },
+  "52": {
+    "date": 1519344000000,
+    "demand": 4112,
+    "isForecast": 0,
+    "seasonality_component": 0.0097834799
+  },
+  "53": {
+    "date": 1519430400000,
+    "demand": 3255,
+    "isForecast": 0,
+    "seasonality_component": 0.0099649161
+  },
+  "54": {
+    "date": 1519516800000,
+    "demand": 3864,
+    "isForecast": 0,
+    "seasonality_component": 0.0108143478
+  },
+  "55": {
+    "date": 1519603200000,
+    "demand": 3767,
+    "isForecast": 0,
+    "seasonality_component": 0.010992424
+  },
+  "56": {
+    "date": 1519689600000,
+    "demand": 3902,
+    "isForecast": 0,
+    "seasonality_component": 0.010481505
+  },
+  "57": {
+    "date": 1519776000000,
+    "demand": 3590,
+    "isForecast": 0,
+    "seasonality_component": 0.0105959525
+  },
+  "58": {
+    "date": 1519862400000,
+    "demand": 3732,
+    "isForecast": 0,
+    "seasonality_component": 0.0101018331
+  },
+  "59": {
+    "date": 1519948800000,
+    "demand": 3884,
+    "isForecast": 0,
+    "seasonality_component": 0.0106824706
+  },
+  "60": {
+    "date": 1520035200000,
+    "demand": 4025,
+    "isForecast": 0,
+    "seasonality_component": 0.010898976
+  },
+  "61": {
+    "date": 1520121600000,
+    "demand": 3847,
+    "isForecast": 0,
+    "seasonality_component": 0.0109061158
+  },
+  "62": {
+    "date": 1520208000000,
+    "demand": 4282,
+    "isForecast": 0,
+    "seasonality_component": 0.0109651246
+  },
+  "63": {
+    "date": 1520294400000,
+    "demand": 3919,
+    "isForecast": 0,
+    "seasonality_component": 0.0112370687
+  },
+  "64": {
+    "date": 1520380800000,
+    "demand": 3791,
+    "isForecast": 0,
+    "seasonality_component": 0.0114533641
+  },
+  "65": {
+    "date": 1520467200000,
+    "demand": 3578,
+    "isForecast": 0,
+    "seasonality_component": 0.0115090129
+  },
+  "66": {
+    "date": 1520553600000,
+    "demand": 4238,
+    "isForecast": 0,
+    "seasonality_component": 0.0117131285
+  },
+  "67": {
+    "date": 1520640000000,
+    "demand": 4443,
+    "isForecast": 0,
+    "seasonality_component": 0.0112534484
+  },
+  "68": {
+    "date": 1520726400000,
+    "demand": 3524,
+    "isForecast": 0,
+    "seasonality_component": 0.0101900312
+  },
+  "69": {
+    "date": 1520812800000,
+    "demand": 2321,
+    "isForecast": 0,
+    "seasonality_component": 0.0102137607
+  },
+  "70": {
+    "date": 1520899200000,
+    "demand": 2510,
+    "isForecast": 0,
+    "seasonality_component": 0.010620102
+  },
+  "71": {
+    "date": 1520985600000,
+    "demand": 3506,
+    "isForecast": 0,
+    "seasonality_component": 0.0109500049
+  },
+  "72": {
+    "date": 1521072000000,
+    "demand": 4136,
+    "isForecast": 1,
+    "seasonality_component": 0.0108649567
+  },
+  "73": {
+    "date": 1521158400000,
+    "demand": 3520,
+    "isForecast": 1,
+    "seasonality_component": 0.0109038059
+  },
+  "74": {
+    "date": 1521244800000,
+    "demand": 4140,
+    "isForecast": 1,
+    "seasonality_component": 0.0109275354
+  },
+  "75": {
+    "date": 1521331200000,
+    "demand": 3025,
+    "isForecast": 1,
+    "seasonality_component": 0.0109128357
+  },
+  "76": {
+    "date": 1521417600000,
+    "demand": 3955,
+    "isForecast": 1,
+    "seasonality_component": 0.0109970439
+  },
+  "77": {
+    "date": 1521504000000,
+    "demand": 3093,
+    "isForecast": 1,
+    "seasonality_component": 0.0110004038
+  },
+  "78": {
+    "date": 1521590400000,
+    "demand": 3708,
+    "isForecast": 1,
+    "seasonality_component": 0.0108634868
+  },
+  "79": {
+    "date": 1521676800000,
+    "demand": 3610,
+    "isForecast": 1,
+    "seasonality_component": 0.0108615968
+  },
+  "80": {
+    "date": 1521763200000,
+    "demand": 4175,
+    "isForecast": 1,
+    "seasonality_component": 0.0106112822
+  },
+  "81": {
+    "date": 1521849600000,
+    "demand": 3363,
+    "isForecast": 1,
+    "seasonality_component": 0.010805108
+  },
+  "82": {
+    "date": 1521936000000,
+    "demand": 3297,
+    "isForecast": 1,
+    "seasonality_component": 0.0114917933
+  },
+  "83": {
+    "date": 1522022400000,
+    "demand": 3587,
+    "isForecast": 1,
+    "seasonality_component": 0.0115258125
+  },
+  "84": {
+    "date": 1522108800000,
+    "demand": 3948,
+    "isForecast": 1,
+    "seasonality_component": 0.0111196813
+  },
+  "85": {
+    "date": 1522195200000,
+    "demand": 3899,
+    "isForecast": 1,
+    "seasonality_component": 0.0110529027
+  },
+  "86": {
+    "date": 1522281600000,
+    "demand": 4270,
+    "isForecast": 1,
+    "seasonality_component": 0.0108187577
+  },
+  "87": {
+    "date": 1522368000000,
+    "demand": 3767,
+    "isForecast": 1,
+    "seasonality_component": 0.0105577333
+  },
+  "88": {
+    "date": 1522454400000,
+    "demand": 3498,
+    "isForecast": 1,
+    "seasonality_component": 0.0107246797
+  },
+  "89": {
+    "date": 1522540800000,
+    "demand": 3869,
+    "isForecast": 1,
+    "seasonality_component": 0.0098309389
+  },
+  "90": {
+    "date": 1522627200000,
+    "demand": 4364,
+    "isForecast": 1,
+    "seasonality_component": 0.0105348438
+  },
+  "91": {
+    "date": 1522713600000,
+    "demand": 3901,
+    "isForecast": 1,
+    "seasonality_component": 0.0106316517
+  },
+  "92": {
+    "date": 1522800000000,
+    "demand": 3396,
+    "isForecast": 1,
+    "seasonality_component": 0.0106331217
+  },
+  "93": {
+    "date": 1522886400000,
+    "demand": 2330,
+    "isForecast": 1,
+    "seasonality_component": 0.0105069144
+  },
+  "94": {
+    "date": 1522972800000,
+    "demand": 3226,
+    "isForecast": 1,
+    "seasonality_component": 0.0108288375
+  }
+}

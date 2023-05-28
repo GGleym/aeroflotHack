@@ -1,0 +1,14 @@
+[
+  {
+    "name": "First Class",
+    "label": "First Class"
+  },
+  {
+    "name": "Economy Class",
+    "label": "Economy Class"
+  },
+  {
+    "name": "Business Class",
+    "label": "Business Class"
+  }
+]
