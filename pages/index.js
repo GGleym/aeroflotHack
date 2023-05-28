@@ -1,13 +1,12 @@
 import Head from 'next/head';
 import { Header } from '../components/Header';
 import { InitialTable } from '../components/tables/InitialTable';
-import { useFetch } from '../functions/fetchData';
-import { dynamicApi } from '../data/apiUrls/dynamicApi';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import {dynamicApi} from "../data/apiUrls/dynamicApi";
+import {Fetch} from "../components/Fetch";
+import {useFetch} from "../api/fetchData";
+import {useEffect} from "react";
 
 export default function Home() {
-  const { data, loading, error } = useFetch(dynamicApi);
 
   return (
     <>

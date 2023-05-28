@@ -79,7 +79,6 @@ export const SelectType = (props) => {
                 placeholder={props.placeholder}
                 name={props.name}
                 styles={customStyles}
-                noOptionsMessage={() => props.noOptionsMessage}
                 required
             />
         </div>

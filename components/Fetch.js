@@ -1,4 +1,4 @@
-import { useFetch } from '../functions/fetchData';
+import { useFetch } from '../api/fetchData';
 
 export const Fetch = ({
   url,

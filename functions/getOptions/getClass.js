@@ -1,6 +1,7 @@
-import firstExcel from "../../data/excelJson/firstExcel.json";
+import firstExcel from '/data/excelJson/firstExcel.json'
 
 export const getClass = () => {
+
     let mapOfClass = new Map();
     let filteredClassArr = [];
     for (let i = 0; i < firstExcel.length; i++) {

@@ -4,16 +4,17 @@ import cityData from '/data/cityData.json';
 import styles from '../../styles/forms/Form.module.css';
 import { ReactCalendar } from '../dynamicForm/CalendarType';
 import React, { useState } from 'react';
-import { sendRequest } from '../../functions/fetchData';
 import classOfBooking from '/data/classOfBooking.json';
 import { useEffect } from 'react';
 import firstExcel from '/data/excelJson/firstExcel.json';
 import periodOfPrediction from '/data/periodOfPrediction.json';
 import {getClass} from "../../functions/getOptions/getClass";
-import {convertJson} from "../../data/chartsData/firstTableData";
-import {filterEverything} from "../../data/chartsData/firstTableData";
+import {convertJson} from "../../functions/chartsData/firstTableData";
+import {filterEverything} from "../../functions/chartsData/firstTableData";
+import {dynamicApi} from "../../data/apiUrls/dynamicApi";
+import {fetchData, useFetch} from "../../api/fetchData";
 
-export const Form = () => {
+export const Form = (props) => {
   const [date, setDate] = useState(new Date("01.01.2018"));
   const [period, setPeriod] = useState(null);
   const [segClass, setSegClass] = useState(null);
@@ -21,7 +22,12 @@ export const Form = () => {
 
   useEffect(() => {
       if (segClass && date && period) { //добавь direction и так далее
-          filterEverything(segClass, date.toLocaleDateString(), period)
+          const getFetchedData = async () => {
+              const tables = await fetchData(dynamicApi)
+              console.log(tables)
+              props.setData(filterEverything(tables, segClass, date.toLocaleDateString(), period))
+          }
+          getFetchedData()
       }
   }, [date, segClass, period])
 
@@ -33,7 +39,9 @@ export const Form = () => {
         textClass={styles.textClass}
         upText={'Направление'}
         isSearchable={false}
-        onChange={(direction) => setDirection(direction)}
+        onChange={(direction) => {
+            setDirection(direction)
+        }}
         options={transpiler(cityData)}
         id={'directionSelect'}
         placeholder={'Выбрать направление'}

@@ -1,14 +1,14 @@
 import { Header } from '../../components/Header';
 import { Form } from '../../components/tables/Form';
 import { FirstChartTable } from '../../components/chartsTables/FirstChartTable';
-import { config, data } from '../../data/chartsData/firstTableData';
+import { config, data } from '../../functions/chartsData/firstTableData';
 import styles from '/styles/forms/Charts.module.css';
 import Head from 'next/head';
 import { SecondChartTable } from '../../components/chartsTables/SecondChartTable';
 import {
   secondConfig,
   secondData
-} from '../../data/chartsData/secondTableData';
+} from '../../functions/chartsData/secondTableData';
 
 const SeasonTable = () => {
   return (

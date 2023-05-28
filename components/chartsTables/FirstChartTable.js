@@ -13,7 +13,6 @@ import {
     BarController,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import firstExcel from "../../data/excelJson/firstExcel.json";
 
 ChartJS.register(
     LinearScale,

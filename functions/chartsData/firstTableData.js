@@ -1,7 +1,11 @@
-import firstExcel from '../excelJson/firstExcel.json'
+import firstExcel from '../../data/excelJson/firstExcel.json'
 import DynamicTable from "../../pages/dynamicTable";
+import {useFetch} from "../../api/fetchData";
+import {dynamicApi} from "../../data/apiUrls/dynamicApi";
+import {useEffect} from "react";
+import {useState} from "react";
 
-const labels = ["Январь", "Март", "Май", "Июль", "Сентябрь", "Ноябрь"]
+const labels = ["Январь","Февраль", "Март","Апрель", "Май","Июнь", "Июль","Август", "Сентябрь","Октябрь", "Ноябрь", "Декабрь"]
 
 
 const getApiData = (arrOfNums) => {
@@ -18,10 +22,7 @@ const getApiData = (arrOfNums) => {
             },
         ],
     }
-
-    return (
-        <DynamicTable data={data}/>
-    )
+    return data
 }
 const getMonth = date => {
     return parseInt(date.slice(5, 7)); //2018-12-31
@@ -38,10 +39,14 @@ const convertDateString = date => {
     return `${yy}-${mm}-${dd}`;
 };
 
-export const filterEverything = (segClass, date, period, direction) => {
+
+
+
+export const filterEverything = (segClass, date, period, direction, tables) => {
+
     let arrOfNums = []
 
-    let filteredArr = firstExcel.filter((item) => {
+    let filteredArr = tables.filter((item) => {
         let firstDemand = item['SEG_CLASS_CODE'] === segClass['value']
         let thirdDemand = item['DIRECTION'] === direction
         let fourthDemand = null
@@ -60,8 +65,8 @@ export const filterEverything = (segClass, date, period, direction) => {
     for (let i = 0; i < filteredArr.length; i++) {
         arrOfNums[i] = filteredArr[i]['PRED_DEMAND']
     }
-
-    getApiData(arrOfNums)
+    const table = getApiData(arrOfNums)
+    return table
 }
 
 

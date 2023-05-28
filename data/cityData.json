@@ -1,14 +1,18 @@
 [
   {
-    "name": "Москва - Сочи"
+    "name": "Москва - Сочи",
+    "label": "Moscow - Sochi"
   },
   {
-    "name": "Сочи - Москва"
+    "name": "Сочи - Москва",
+    "label": "Sochi - Moscow"
   },
   {
-    "name": "Москва - Астрахань"
+    "name": "Москва - Астрахань",
+    "label": "Moscow - Astrahan"
   },
   {
-    "name": "Астрахань - Москва"
+    "name": "Астрахань - Москва",
+    "label": "Astrahan - Moscow"
   }
 ]
