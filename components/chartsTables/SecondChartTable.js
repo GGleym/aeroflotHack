@@ -1,39 +1,25 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
     Chart as ChartJS,
-    LinearScale,
-    CategoryScale,
-    BarElement,
-    PointElement,
-    LineElement,
-    Legend,
-    Title,
-    Tooltip,
-    LineController,
-    BarController,
+    registerables
 } from 'chart.js';
 import { Chart } from 'react-chartjs-2';
+import {ToggleGroup} from "../tables/TogglesGroup";
+import {useState} from "react";
 
 ChartJS.register(
-    LinearScale,
-    CategoryScale,
-    BarElement,
-    PointElement,
-    LineElement,
-    Legend,
-    Title,
-    Tooltip,
-    LineController,
-    BarController
+    ...registerables
 );
-
 
 
 //вторая таблица с данными
 export const SecondChartTable = (props) => {
+    const [typeOfChart, setTypeOfChart] = useState('line')
+
     return (
         <div className={props.className}>
-            <Chart data={props.data} type={'bar'} options={props.options}/>
+            <Chart data={props.data} type={typeOfChart} options={props.options}/>
+            <ToggleGroup setTypeOfChart={setTypeOfChart}/>
         </div>
     )
 }

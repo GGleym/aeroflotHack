@@ -1,14 +1,14 @@
 [
   {
     "name": "Сочи",
-    "label": "toSochi"
+    "label": "AER"
   },
   {
     "name": "Москва",
-    "label": "toMoscow"
+    "label": "SVO"
   },
   {
     "name": "Астрахань",
-    "label": "toAstrahan"
+    "label": "ASF"
   }
 ]

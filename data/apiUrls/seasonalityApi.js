@@ -1,1 +1,1 @@
-export const seasonalityApi = 'https://api.forward-it.ru/api/seasonality'
+export const seasonalityApi = 'https://api.forward-it.ru/api/seasonality-filter?'

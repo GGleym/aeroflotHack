@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
     Chart as ChartJS,
     LinearScale,
@@ -12,7 +12,9 @@ import {
     LineController,
     BarController,
 } from 'chart.js';
-import { Line } from 'react-chartjs-2';
+import {Chart, Line, Bar} from 'react-chartjs-2';
+import {ToggleGroup} from "../tables/TogglesGroup";
+import {useState} from "react";
 
 ChartJS.register(
     LinearScale,
@@ -31,9 +33,12 @@ ChartJS.register(
 
 //1-ая таблица с данными
 export const FirstChartTable = (props) => {
+    const [typeOfChart, setTypeOfChart] = useState('line')
+
     return (
         <div className={props.className}>
-            <Line data={props.data} options={props.options}/>
+            <Chart data={props.data} options={props.options} type={typeOfChart}/>
+            <ToggleGroup setTypeOfChart={setTypeOfChart}/>
         </div>
     )
 }

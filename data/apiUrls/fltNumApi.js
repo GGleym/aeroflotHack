@@ -1,0 +1,1 @@
+export const fltNumApi = 'https://api.forward-it.ru/api/get-flt-num-by-class-code?'

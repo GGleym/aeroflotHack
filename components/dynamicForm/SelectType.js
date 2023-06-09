@@ -1,21 +1,14 @@
 import React from 'react'
 import Select from 'react-select'
-import styles from '../../styles/forms/Form.module.css'
+import {ChangeDirection} from "../ChangeDirection";
 
 export const SelectType = (props) => {
     const options = props.options;
-    // const formatOptionLabel = ({ label, value, desc }) => (
-    //     <div className={styles.optionItem}>
-    //         <p>{label}</p>
-    //         {(desc !== '') ? <p className={styles.optionChild}>{desc}</p> : ''}
-    //     </div>
-    // );
-
 
     const customStyles = {
         control: (defaultStyles) => ({
             ...defaultStyles,
-            width: "220px",
+            width: "180px",
             boxShadow: "none",
             borderRadius: "16px",
             border: '1px solid #D0D0D0',
@@ -48,14 +41,14 @@ export const SelectType = (props) => {
         }),
         menu: (defaultStyles) => ({
             ...defaultStyles,
-            width: '220px',
-            borderRadius: '16px'
+            width: '180px',
+            borderRadius: '16px',
         }),
         menuList: (defaultStyles) => ({
             ...defaultStyles,
-            width: '220px',
+            width: '180px',
             padding: 0,
-            borderRadius: '16px'
+            borderRadius: '16px',
         }),
         option: (defaultStyles) => ({
             ...defaultStyles,
@@ -69,8 +62,10 @@ export const SelectType = (props) => {
 
     return (
         <div className={props.className}>
+            <ChangeDirection from={props.fromDirection} to={props.toDirection} showAlert={props.showAlert} />
             <p className={props.textClass}>{props.upText}</p>
             <Select
+                menuPosition={'fixed'}
                 classNamePrefix="react-select"
                 isSearchable={props.isSearchable}
                 options={options}

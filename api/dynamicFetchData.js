@@ -1,67 +1,31 @@
-import { useEffect } from 'react';
-import { useState } from 'react';
 
-// export const useFetch = (url) => {
-//     const [data, setData] = useState()
-//     const [loading, setLoading] = useState()
-//     const [error, setError] = useState()
-//
-//     useEffect(() => {
-//         const fetchData = async () => {
-//             try {
-//                 const result = await fetch(
-//                     url,
-//                     {
-//                         headers: {
-//                             "Content-type": 'application/json',
-//                             "Accept": 'application/json'
-//                         },
-//                         method: "GET",
-//                     }
-//                 )
-//                 const data = await result.json()
-//                 setData(data)
-//                 setLoading(false)
-//             } catch (err) {
-//                 console.log(err)
-//                 setError(err)
-//             }
-//         }
-//         fetchData().then((data) => setData(data.json()))
-//
-//     }, url)
-//
-//     return {
-//         data,
-//         loading,
-//         error
-//     }
-// }
+export const dynamicFetchData = async (
+  url,
+  dateOfBooking,
+  period,
+  classOfBooking,
+  fromDirection,
+  toDirection,
+  fltNum
+) => {
+  let response;
 
-
-export const dynamicFetchData = (url) => {
-    const [data, setData] = useState()
-    const [error, setError] = useState()
-    const [loading, setLoading] = useState()
-
-    useEffect(() => {
-        try {
-            const result = async () => {
-                const response = await fetch(url)
-                const data = await response.json()
-                setData(data)
-                setLoading(false)
-            }
-            result()
-        } catch (err) {
-            setError(err)
-            console.log(err)
-        }
-    }, [url])
-
-    return {
-        data,
-        error
+  const result = await fetch(
+    `${url}class-history-filter?startDate=${dateOfBooking}&period=${period}&seg_class_code=${classOfBooking}&sorg=${fromDirection}&sdst=${toDirection}&flt_num=${fltNum}`,
+    {
+      headers: {
+        "Content-type": 'application/json',
+        "Accept": 'application/json'
+      },
+      method: 'GET'
     }
-
-}
+  );
+  const data = await result.json();
+  console.log(data)
+  if (result.ok) {
+    response = true
+  } else {
+    console.log('There is a trouble on the server...')
+  }
+  return [data, response];
+};

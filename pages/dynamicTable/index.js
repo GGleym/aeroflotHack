@@ -1,24 +1,26 @@
 import { Header } from '../../components/Header';
 import { Form } from '../../components/tables/Form';
 import { FirstChartTable } from '../../components/chartsTables/FirstChartTable';
-import {config, data, filterEverything} from '../../functions/chartsData/firstTableData';
+import {
+  config,
+  convertDateString,
+  filterEverything
+} from '../../functions/chartsData/firstTableData';
 import styles from '/styles/forms/Charts.module.css';
 import Head from 'next/head';
-import {
-  secondData
-} from '../../functions/chartsData/secondTableData';
-import {useState} from "react";
-import {useFetch} from "../../api/dynamicFetchData";
-import {dynamicApi} from "../../data/apiUrls/dynamicApi";
-import {DynamicLoader} from "../../components/loaders/dynamicLoader";
-import {ShowAlert} from "../../components/loaders/ShowAlert";
-import {SecondChartTable} from "../../components/chartsTables/SecondChartTable";
-
+import React, { useEffect, useState } from 'react';
+import { ChooseParamsAlert } from '../../components/loaders/ChooseParamsAlert';
+import { DynamicLoader } from '../../components/loaders/dynamicLoader';
+import { NoInfo } from '../../components/NoInfo';
+import {ToggleGroup} from "../../components/tables/TogglesGroup";
 
 const DynamicTable = props => {
-    const [data, setData] = useState(null)
-    const [firstTableData, setFirstTableData] = useState(null)
-
+  const [data, setData] = useState(null);
+  const [loader, setLoader] = useState(true);
+  const [notPicked, setNotPicked] = useState(true);
+  const [noInfo, setNoInfo] = useState(false);
+  const [mounted, setMounted] = useState(true);
+  const [typeOfChart, setTypeOfChart] = useState('line')
 
   return (
     <>
@@ -27,19 +29,45 @@ const DynamicTable = props => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Header />
-      <Form setData={setData} apiUrl={}/>
-      <div className={styles.chartsTableDiv}>
-          {
-             data ? (
-                 <FirstChartTable
-                     data={data}
-                     options={config}
-                     className={styles.chartsTable}
-                 />
-             ) : <ShowAlert />
 
-          }
+      <Form
+        unmountTable={unmount => {
+            setMounted(unmount)
+        }}
+        setNoInfo={info => {
+            setNoInfo(info)
+        }}
+        setData={(data) => {
+            setData(data)
+            setTypeOfChart('line')
+        }}
+
+        setLoader={response => {
+          setLoader(response);
+        }}
+        dataPicked={picked => {
+          setNotPicked(picked);
+        }}
+      />
+      <div className={styles.chartsTableDiv}>
+        {notPicked ? (
+          <ChooseParamsAlert title1={`Просто выберите необходимые параметры сверху,`} title2={"и программа рассчитает динамику бронирования!"} />
+        ) : loader ? (
+          <DynamicLoader />
+        ) : noInfo ? (
+          <NoInfo />
+        ) : (
+            mounted && (
+            <FirstChartTable
+              data={data}
+              typeOfChart={typeOfChart}
+              options={config}
+              className={styles.chartsTable}
+            />
+          )
+        )}
       </div>
+
     </>
   );
 };

@@ -1,3 +1,16 @@
+@media (min-width: 950px) {
+    .headerIcon {
+        display: none;
+    }
+
+}
+
+@media (max-width: 951px) {
+    .header {
+        margin-bottom: 30px;
+    }
+}
+
 .header {
     width: 100%;
     background-color: #002596;
@@ -21,4 +34,5 @@
     color: white;
     font-weight: 700;
 }
+
 
