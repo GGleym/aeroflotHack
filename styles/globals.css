@@ -125,7 +125,7 @@ input {
 /*Анимации*/
 .bounce-enter {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(10px);
 }
 
 .bounce-enter-active {

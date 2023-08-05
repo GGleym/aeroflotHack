@@ -62,7 +62,7 @@ const DynamicTable = props => {
               data={data}
               typeOfChart={typeOfChart}
               options={config}
-              className={styles.chartsTable}
+              className={styles.chartsTableDynamic}
             />
           )
         )}

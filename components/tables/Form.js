@@ -23,7 +23,8 @@ import {getAllDates} from "../../functions/tablesData/getAllDates";
 import {getAllData} from "../../functions/tablesData/getAllData";
 import {fltNumFetchData} from "../../api/fltNumFetchData";
 import {fltNumApi} from "../../data/apiUrls/fltNumApi";
-import {getFontDefinitionFromManifest} from "next/dist/server/font-utils";
+import newClasses from '../../data/newClasses.json'
+import newestClasses from '../../data/newestClasses.json'
 
 export const Form = props => {
   const [date, setDate] = useState();
@@ -33,7 +34,7 @@ export const Form = props => {
   const [toDirection, setToDirection] = useState(null);
   const [fltNum, setFltNum] = useState(null)
   const [showAlert, setShowAlert] = useState(false)
-    const [getNums, setGetNums] = useState(null)
+  const [getNums, setGetNums] = useState(null)
   const router = useRouter();
 
   useEffect(() => {
@@ -147,6 +148,7 @@ export const Form = props => {
               parseInt(fltNum['value'])
           );
 
+
           for (let k = 0; k < table[0].length; k++) {
             let hash = table[0];
             if (hash[k]['trend_route_7d_rolling'] === 0) {
@@ -203,20 +205,19 @@ export const Form = props => {
               placeholder={'Направление...'}
               name={'toDirectionSelect'}
           />
-
-          <SelectType
-              textClass={styles.textClass}
-              className={styles.selectWrapper}
-              upText={'Класс бронирования'}
-              onChange={segClass => {
-                setSegClass(segClass);
-              }}
-              isSearchable={false}
-              options={getClass(firstExcel)}
-              id={'directionSelect'}
-              placeholder={'Класс...'}
-              name={'directionSelect'}
-          />
+            <SelectType
+                textClass={styles.textClass}
+                className={styles.selectWrapper}
+                upText={'Класс бронирования'}
+                onChange={segClass => {
+                    setSegClass(segClass);
+                }}
+                isSearchable={false}
+                options={newClasses}
+                id={'directionSelect'}
+                placeholder={'Класс...'}
+                name={'directionSelect'}
+            />
           <SelectType
               textClass={styles.textClass}
               upText={'Номер рейса'}
@@ -237,8 +238,8 @@ export const Form = props => {
                 setDate(e);
               }}
               showYearDropdown={router.pathname === '/dynamicTable'}
-              maxDate={router.pathname === '/dynamicTable' || router.pathname === '/seasonTable' ? new Date("12.31.2019") : new Date("12.31.2020")}
-              minDate={router.pathname === '/dynamicTable' || router.pathname === '/seasonTable' ? new Date("01.01.2018") : new Date("01.01.2020")}
+              maxDate={router.pathname === '/dynamicTable' ? new Date("12.31.2019") : new Date("12.31.2020")}
+              minDate={router.pathname === '/dynamicTable' ? new Date("01.01.2018") : new Date("01.01.2020")}
               placeholder={'Выбрать дату'}
           />
 

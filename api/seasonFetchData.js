@@ -22,6 +22,7 @@ export const seasonFetchData = async (
     const data = await result.json()
 
 
+    console.log(data)
 
 
     if (result.ok) {

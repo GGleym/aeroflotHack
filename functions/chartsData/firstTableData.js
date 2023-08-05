@@ -40,7 +40,7 @@ export const filterEverything = (filteredArr, dateTable, demand) => {
     for (let i = 0; i < filteredArr.length; i++) {
         if (!mapOfDates.get(filteredArr[i][dateTable])) {
             mapOfDates.set(
-                invertDateString(filteredArr[i][dateTable]), parseFloat(filteredArr[i][demand])
+                invertDateString(filteredArr[i][dateTable]), parseInt(filteredArr[i][demand])
             )
         }
 

@@ -65,6 +65,7 @@ export const SelectType = (props) => {
             <ChangeDirection from={props.fromDirection} to={props.toDirection} showAlert={props.showAlert} />
             <p className={props.textClass}>{props.upText}</p>
             <Select
+                blurInputOnSelect={false}
                 menuPosition={'fixed'}
                 classNamePrefix="react-select"
                 isSearchable={props.isSearchable}

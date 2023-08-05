@@ -60,7 +60,7 @@ const SeasonTable = props => {
               data={data}
               typeOfChart={typeOfChart}
               options={secondConfig}
-              className={styles.chartsTable}
+              className={styles.chartsTableDynamic}
             />
           )
         )}

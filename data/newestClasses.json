@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Business Class",
+    "value": ["I", "D", "Z", "C", "J"]
+  },
+  {
+    "label": "First Class",
+    "value": ["P", "R"]
+  },
+  {
+    "label": "Economy Class",
+    "value": ["Y", "B", "H", "K", "L", "M", "N", "Q", "T", "V", "G", "X", "E", "U"]
+  }
+]
